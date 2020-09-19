@@ -1,0 +1,85 @@
+
+@import './../../styles/colors';
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.race {
+    color: #B5A9A9;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    min-width: 0;
+}
+.price {
+    color: #064F0D;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: bold;
+    min-width: 0;
+}
+
+.name {
+    font-size: 2.4rem;
+    color: $base;
+    text-transform: uppercase;
+
+}
+
+.seller {
+    background: $searchPanel;
+    padding: 2rem;
+    height: 100%;
+
+    &__title {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding: 1.5rem 0;
+    }
+    p {
+        font-size: 1.6rem;
+        margin: 0;
+    }
+}
+
+.photoCar {
+    img {
+        width: 100%;
+    }
+}
+
+.propertiesList {
+    padding: 3rem 0 0 3rem;
+    list-style: none;
+
+    li {
+        font-size: 1.6rem;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 0 2rem 0;
+
+        &:last-child {
+            div {
+                &:last-child {
+                    flex-basis: 100%;
+                } 
+            }  
+        }
+    }
+
+    &__name {
+        min-width: 0;
+        color: #B5A9A9;
+        padding: 0 1rem 0 0;
+    }
+    &__field {
+        min-width: 0;
+    }
+}

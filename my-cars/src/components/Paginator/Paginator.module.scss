@@ -1,0 +1,33 @@
+
+@import './../../styles/colors';
+.paginator {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    li {
+        margin: 0 10px;
+        a {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: $base;
+            padding: 1em 2em;
+            border: 1px solid $base;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        &:first-child, &:last-child {
+            a {
+                background: #C4C4C4;
+                border: 1px solid #C4C4C4;
+                
+            }
+        }
+        &:first-child {
+            margin-right: auto;
+        }
+        &:last-child {
+            margin-left: auto;
+        }
+    }  
+}
