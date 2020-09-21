@@ -6,7 +6,7 @@ function Submit(props) {
 
   return (
       <>
-        <button className={styles.submit}>{props.text}</button>
+        <button type={props.type} className={styles.submit}>{props.text}</button>
       </>
   );
 }

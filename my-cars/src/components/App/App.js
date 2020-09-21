@@ -6,10 +6,12 @@ import {
   Route
 } from "react-router-dom";
 
-import Header from '../Header/ibdex';
-import MainPage from '../MainPage/ibdex';
-import Product from '../Product/ibdex';
-import Footer from '../Footer/ibdex';
+import Header from '../Header/';
+import MainPage from '../MainPage/';
+import Product from '../Product/';
+import Footer from '../Footer/';
+import Singup from '../Singup/'
+import Login from '../Login/'
 
 
 
@@ -24,6 +26,12 @@ function App() {
           </Route>
           <Route path="/product">
             <Product />
+          </Route>
+          <Route path="/singup">
+            <Singup />
+          </Route>
+          <Route path="/login">
+            <Login />
           </Route>
         </Switch>
         <Footer/>

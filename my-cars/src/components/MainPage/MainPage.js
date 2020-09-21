@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './MainPage.module.scss';
 
-import Search from '../Search/ibdex';
-import Cart from '../Cart/ibdex';
-import Paginator from '../Paginator/ibdex';
+import Search from '../Search';
+import Cart from '../Cart';
+import Paginator from '../Paginator';
 
 import car_1 from '../Cart/img/001.jpg';
 

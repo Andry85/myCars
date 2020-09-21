@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import styles from './Search.module.scss';
 
-import SearchTabs from './SearchTabs/ibdex';
-import Submit from './../Submit/ibdex';
+import SearchTabs from './SearchTabs';
+import Submit from '../Submit';
 
 
 function Search() {
