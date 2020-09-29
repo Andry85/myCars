@@ -18,6 +18,10 @@
         padding: 2rem;
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+    
     }
 
     &__addPhotoTitle {
@@ -25,4 +29,14 @@
         text-transform: uppercase;
         font-weight: 500;
     }
+
+    &__bottom {
+        padding: 3rem 0;
+        
+        select {
+            height: 9rem;
+            border: 1px solid #C4C4C4;
+        }
+    }
+
 }

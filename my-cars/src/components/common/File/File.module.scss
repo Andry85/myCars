@@ -1,0 +1,27 @@
+@import '../../../styles/colors';
+
+.file {
+
+    position: relative;
+    
+
+    &__input {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+
+    &__label {
+        background: url(../File/img/avatar.svg) no-repeat;
+        background-size: 9.4rem 9.4rem;
+        width: 9.4rem;
+        height: 9.4rem;
+        display: block;
+        text-indent: -9000px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+}
