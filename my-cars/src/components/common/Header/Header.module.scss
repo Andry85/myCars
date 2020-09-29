@@ -1,0 +1,28 @@
+@import './../../../styles/colors';
+
+.header {
+        border-bottom: 4px solid $base;
+        height: 160px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.logo {
+    color: $logo;
+    display: flex;
+    font-size: 3.6rem;
+    text-decoration: none;
+}
+.officeList {
+    margin: 0;
+    padding: 0;
+    li {
+        list-style: none;
+        a {
+            color: $secondary;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+
+@import './../../../styles/colors';
+
+.cabinetTop {
+    background: #C4C4C4;
+    padding: 2rem 4rem;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__sellername {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+
+    &__editBtn { 
+        a {
+            color: $secondary;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+    }
+
+    &__contactList {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 1rem 0;
+
+        li {
+            margin: 0;
+            padding: 0 1rem 0 0;
+        }
+    }
+}

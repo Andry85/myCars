@@ -1,0 +1,28 @@
+
+@import './../../../styles/colors';
+
+.formWrap {
+
+    &__back {
+        
+        a {
+            color: $secondary;
+            font-size: 1.6rem;
+            display: block;
+            margin: 0 0 2rem 0;
+        }
+        
+    }
+
+    &__top {
+        padding: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__addPhotoTitle {
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+}

@@ -6,12 +6,13 @@ import {
   Route
 } from "react-router-dom";
 
-import Header from '../Header/';
-import MainPage from '../MainPage/';
-import Product from '../Product/';
-import Footer from '../Footer/';
-import Singup from '../Singup/'
-import Login from '../Login/'
+import Header from '../../components/common/Header';
+import MainPage from '../views/MainPage/';
+import Product from '../views/Product/';
+import Footer from '../../components/common/Footer';
+import Singup from '../views/Singup/';
+import Login from '../views/Login';
+import Cabinet from '../views/Cabinet';
 
 
 
@@ -33,6 +34,10 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
+          <Route path="/cabinet">
+            <Cabinet />
+          </Route>
+          
         </Switch>
         <Footer/>
       </div>

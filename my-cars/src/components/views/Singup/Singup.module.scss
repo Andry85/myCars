@@ -1,0 +1,21 @@
+
+@import './../../../styles/colors';
+
+.formWrap {
+    max-width: 582px;
+    margin: 0 auto;
+    padding: 5rem 1rem;
+
+    button {
+        height: 9rem;
+    }
+
+    &__login {
+        a {
+            font-size: 1.4rem;
+            display: block;
+            text-align: center;
+            padding: 2rem;
+        }
+    }
+}

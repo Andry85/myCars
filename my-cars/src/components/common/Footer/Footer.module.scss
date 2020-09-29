@@ -1,0 +1,13 @@
+@import './../../../styles/colors';
+.footer {
+    padding: 2rem 1rem;
+    border-top: 4px solid $base;
+    display: flex;
+    justify-content: space-between;
+
+    &__logo {
+        font-size: 1.6rem;
+        color: $base;
+        text-decoration: none;
+    }
+}

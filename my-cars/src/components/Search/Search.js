@@ -2,15 +2,16 @@ import React, {useState} from 'react';
 import styles from './Search.module.scss';
 
 import SearchTabs from './SearchTabs';
-import Submit from '../Submit';
+import Submit from '../common/Submit';
+import Select from '../common/Select';
 
 
 function Search() {
   const [cars, setCars] = useState({
-    carTypes: [
+    allCars: [
           {
             type: 'Легкові',
-            brands: [
+            marka: [
               {
                 title: 'BMW',
                 models: ['100', '200', '3000', '400']
@@ -27,7 +28,7 @@ function Search() {
           },
           {
             type: 'Вантажівки',
-            brands: [
+            marka: [
               {
                 title: 'ТATA',
                 models: ['10', '20', '300', '40']
@@ -44,7 +45,7 @@ function Search() {
           },
           {
             type: 'Автобуси',
-            brands: [
+            marka: [
               {
                 title: 'IKARUS',
                 models: ['1010', '2020', '3020', '4040']
@@ -62,44 +63,37 @@ function Search() {
         ],
         title: [],
         models: [],
-        selectedType : '--Choose Type--',
-			  selectedTitle : '--Choose Title--'
+        selectedType : 'Виберіть тип',
+			  selectedTitle : 'Виберіть марку'
       }
   );
 
-  console.log(cars);
-
   function changeType(event) {
-
-    console.log(event.target.value);
 
     event.persist();
 
     setCars(prevState => {
       return {...prevState, 
         selectedType: event.target.value,
-        title: cars.carTypes.find(cntry => cntry.type === event.target.value).brands
+        title: cars.allCars.find(item => item.type === event.target.value).marka
       };
     });
 
   }
-  function changeTitle(event) {
+  function changeMarka(event) {
 
     event.persist();
 
-    let stats = cars.carTypes.find(cntry => cntry.type === cars.selectedType).brands;
+    let marksArr = cars.allCars.find(item => item.type === cars.selectedType).marka;
 
     setCars(prevState => {
       return {...prevState, 
         selectedTitle: event.target.value,
-        models: stats.find(stat => stat.title === event.target.value).models  
+        models: marksArr.find(item => item.title === event.target.value).models  
       };
     });
 
   }
-
-
-
 
   return (
       <>
@@ -111,38 +105,31 @@ function Search() {
                 <form method="post" action="/">
                   <div className="row pt-4 gy-4">
                     <div className="col-6">
-                      <select 
-                      className={styles.select} 
-                      placeholder="Type" 
-                      value={cars.selectedType} 
-                      onChange={changeType}>
-                        <option>--Choose Type--</option>
-                        {cars.carTypes.map((e, key) => {
-                          return <option key={key}>{e.type}</option>;
-                        })}
-                      </select>
+                      <Select
+                        items={cars.allCars}
+                        title="Виберіть тип"
+                        value={cars.selectedType}
+                        placeholder="Type"
+                        handler={changeType}
+                        filter="type"
+                      />
                     </div>
                     <div className="col-6">
-                      <select 
-                      className={styles.select} 
-                      placeholder="Title" 
-                      value={cars.selectedTitle} 
-                      onChange={changeTitle}>
-                        <option>--Choose Title--</option>
-                        {cars.title.map((e, key) => {
-                          return <option key={key}>{e.title}</option>;
-                        })}
-                      </select>
+                      <Select
+                        items={cars.title}
+                        title="Виберіть марку"
+                        value={cars.selectedTitle}
+                        placeholder="Type"
+                        handler={changeMarka}
+                        filter="title"
+                      />
                     </div>
                     <div className="col-6">
-                      <select 
-                      className={styles.select}
-                      placeholder="Model">
-                        <option>--Choose Model--</option>
-                        {cars.models.map((e, key) => {
-                          return <option key={key}>{e}</option>;
-                        })}
-                      </select>
+                      <Select
+                        items={cars.models}
+                        title="Виберіть модель"
+                        placeholder="Model"
+                      />
                     </div>   
                     <div className="col-6">
                       <Submit text="пошук"/>

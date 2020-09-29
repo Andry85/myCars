@@ -1,0 +1,35 @@
+@import '../../../styles/colors';
+
+.tabsHeader {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #C4C4C4;
+    list-style: none;
+
+    li {
+        color: $secondary;
+        font-size: 1.8rem;
+        padding: 1rem;
+        margin: 0 3rem 0 0;
+        cursor: pointer;
+
+        &.active {
+            font-weight: 500;
+        }
+    }
+}
+
+.tabsContent {
+    padding: 2rem;
+
+    > div {
+        padding: 0;
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}
