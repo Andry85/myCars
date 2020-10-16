@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styles from './Header.module.scss';
+
+import ThemeContext from '../../../ThemeContext';
 
 import {
   BrowserRouter as Router,
@@ -10,12 +12,13 @@ import {
 
 
 function Header() {
+  const color = React.useContext(ThemeContext);
   return (
       <div className="container">
         <div className="row">
           <div className="col">
             <header className={styles.header}>
-              <a className={styles.logo} href="/">MyCars</a>
+              <a style={{color}} className={styles.logo} href="/">MyCars</a>
               <ul className={styles.officeList}>
                 <li><Link to='/singup'>Кабінет</Link></li>
               </ul>

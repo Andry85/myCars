@@ -12,7 +12,7 @@ function Footer() {
           <div className="row">
               <div className="col">
               <footer className={styles.footer}>
-                <a className={styles.footer__logo} href="/">My cars</a>
+                <a className={styles.footer__logo} href="/">My cars</a> 
               </footer>
               </div>
           </div>

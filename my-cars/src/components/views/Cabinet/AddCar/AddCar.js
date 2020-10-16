@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import { useFormik } from 'formik';
 import styles from './AddCar.module.scss';
-import Submit from '../../common/Submit';
-import Input from '../../common/Input';
-import File from './../../common/File';
-import Select from '../../common/Select';
+import Submit from '../../../common/Submit';
+import Input from '../../../common/Input';
+import File from './../../../common/File';
+import Select from '../../../common/Select';
+import Textarea from '../../../common/Textarea';
 
 
 import {
@@ -89,6 +90,7 @@ const AddCar = () => {
       probig: '',
       engine: '',
       price: null,
+      desc: ''
     },
     onSubmit: values => {
       alert(JSON.stringify(
@@ -99,6 +101,7 @@ const AddCar = () => {
           probig: values.probig,
           engine: values.engine,
           price: values.price,
+          desc: values.desc
         }
         , null, 2));
     }
@@ -258,7 +261,14 @@ const AddCar = () => {
 
                         <div className="row pb-4">
                           <div className="col-12">
-                            
+                            <Textarea
+                                type="textarea"
+                                placeholder="Опис"
+                                id="desc"
+                                name="desc"
+                                value={formik.values.desc}
+                                handler={formik.handleChange}
+                              />
                           </div>
                         </div>
                       

@@ -13,6 +13,7 @@ import Footer from '../../components/common/Footer';
 import Singup from '../views/Singup/';
 import Login from '../views/Login';
 import Cabinet from '../views/Cabinet';
+import Test from '../views/Test';
 
 
 
@@ -36,6 +37,9 @@ function App() {
           </Route>
           <Route path="/cabinet">
             <Cabinet />
+          </Route>
+          <Route path="/test">
+            <Test />
           </Route>
           
         </Switch>

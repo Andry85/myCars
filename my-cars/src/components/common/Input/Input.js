@@ -4,10 +4,6 @@ import styles from './Input.module.scss';
 
 function Input(props) {
 
-  function handler() {
-    props.handler();
-  }
-
 
   return (
       <>
@@ -18,7 +14,6 @@ function Input(props) {
           placeholder={props.placeholder}
           id={props.id}
           name={props.name}
-          value={props.value}
           onChange={props.handler}
         />
       </>

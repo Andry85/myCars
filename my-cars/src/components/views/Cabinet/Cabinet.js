@@ -4,7 +4,9 @@ import styles from './Cabinet.module.scss';
 import Submit from '../../common/Submit';
 import Input from '../../common/Input';
 import Tabs from '../../common/Tabs';
-import AddCar from '../../views/AddCar';
+import AddCar from '../Cabinet/AddCar';
+import Settings from '../Cabinet/Settings';
+import Anceta from '../Cabinet/Anceta';
 
 import {
   BrowserRouter as Router,
@@ -20,11 +22,10 @@ const Cabinet = () => {
     sellername: 'Сергій',
     phone: '066-666-666',
     email: 'shapovala@ukr.net',
-    editBtn: 'Редагувати',
     activeTab: 0,
     tabs: {
-      list: ['Мої оголошення', 'Налаштування'],
-      components: [<AddCar/>,<Input/>]
+      list: ['Мої оголошення', 'Налаштування', 'Редагувати'],
+      components: [<AddCar/>,<Settings/>,<Anceta />]
     }
   });
 
@@ -37,9 +38,6 @@ const Cabinet = () => {
             <div className={styles.cabinetTop}>
               <div className={styles.cabinetTop__row}>
                 <h3 className={styles.cabinetTop__sellername}>{data.sellername}</h3>
-                <div className={styles.cabinetTop__editBtn}>
-                  <Link to='/cabinet/edit'>{data.editBtn}</Link>
-                </div>
               </div>
               <div className={styles.cabinetTop__row}>
                 <ul className={styles.cabinetTop__contactList}>
@@ -53,7 +51,7 @@ const Cabinet = () => {
 
         <div className="row pt-5 pb-5">
           <div className="col-12">
-            <Tabs items={data} handle={setData} />
+              <Tabs items={data} handle={setData} />
           </div>
         </div>
 
