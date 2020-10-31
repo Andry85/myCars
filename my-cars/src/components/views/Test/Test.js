@@ -15,6 +15,19 @@ import GetData from '../../common/education/HTTP/GetData';
 import Post from '../../common/education/HTTP/Post';
 import Delete from '../../common/education/HTTP/Delete';
 import UseStateComponent from '../../common/education/Hooks/useStateComponent/useStateComponent';
+import UseEffectComponent from '../../common/education/Hooks/useEffectComponent/UseEffectComponent';
+import UseReducerComponent from '../../common/education/Hooks/useReducerComponent/UseReducerComponent';
+import UseReducerFetchingData from '../../common/education/Hooks/useReducerComponent/UseReducerFetchingData';
+import UseCallbackComponent from '../../common/education/Hooks/useCallbackComponent/UseCallbackComponent';
+import UseMemoComponent from '../../common/education/Hooks/useMemoComponent/UseMemoComponent';
+import UseRefComponent from '../../common/education/Hooks/useRefComponent/UseRefComponent';
+import UseCustomeComponent from '../../common/education/Hooks/useCustomeComponent/UseCustomeComponent';
+import UseCustomeComponentTwo from '../../common/education/Hooks/useCustomeComponent/UseCustomeComponentTwo';
+import CakeStore from '../../common/education/Redux/CakeStore';
+import CakeStoreHooks from '../../common/education/Redux/CakeStoreHooks';
+import UserContainerAsync from '../../common/education/Redux/UserContainerAsync';
+import PostsContainer from '../../common/education/Redux/PostsContainer';
+import AddingPost from '../../common/education/Redux/AddingPost';
 
 
 
@@ -51,7 +64,37 @@ const Test = () => {
                 <Post/>
                 <Delete/> */}
 
-                <UseStateComponent />
+                {/* <UseStateComponent /> */}
+
+                {/* <UseEffectComponent/> */}
+
+                {/* <UseReducerComponent /> */}
+
+                {/* <UseReducerFetchingData /> */}
+
+                {/* <UseCallbackComponent /> */}
+
+                {/* <UseMemoComponent /> */}
+
+                {/* <UseRefComponent/> */}
+
+                {/* <UseCustomeComponent/>
+                <UseCustomeComponentTwo/> */}
+
+                {/* <CakeStore/> */}
+
+                {/* <CakeStoreHooks/> */}
+
+                {/* <UserContainerAsync/> */}
+
+                {/* <PostsContainer/>
+
+                <AddingPost /> */}
+
+                {/* <GetData/> */}
+                {/* <Post/> */}
+
+                <Delete />
             
           </div>
       </div>
