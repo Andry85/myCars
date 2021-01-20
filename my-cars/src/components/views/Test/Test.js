@@ -1,4 +1,5 @@
 import React from 'react';
+import ReCAPTCHA from "react-google-recaptcha";
 
 
 import ClickCounter from '../../common/hoc/ClickCounter';
@@ -35,6 +36,11 @@ import AddingPost from '../../common/education/Redux/AddingPost';
 
 
 const Test = () => {
+
+  function onChange(value) {
+    console.log("Captcha value:", value);
+  }
+
   return (
     <div className="container">
         <div className="row p-5">
@@ -95,6 +101,11 @@ const Test = () => {
                 {/* <Post/> */}
 
                 <Delete />
+
+                <ReCAPTCHA
+                sitekey="Your client site key"
+                onChange={onChange}
+              />
             
           </div>
       </div>
