@@ -1,5 +1,4 @@
-import React from 'react';
-import ReCAPTCHA from "react-google-recaptcha";
+import React, { useState } from 'react';
 
 
 import ClickCounter from '../../common/hoc/ClickCounter';
@@ -29,6 +28,7 @@ import CakeStoreHooks from '../../common/education/Redux/CakeStoreHooks';
 import UserContainerAsync from '../../common/education/Redux/UserContainerAsync';
 import PostsContainer from '../../common/education/Redux/PostsContainer';
 import AddingPost from '../../common/education/Redux/AddingPost';
+import GoogleCaptcha from '../../common/education/GoogleCaptcha';
 
 
 
@@ -102,10 +102,9 @@ const Test = () => {
 
                 <Delete />
 
-                <ReCAPTCHA
-                sitekey="Your client site key"
-                onChange={onChange}
-              />
+                <GoogleCaptcha/>
+
+  
             
           </div>
       </div>
