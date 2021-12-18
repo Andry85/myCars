@@ -80,7 +80,7 @@ const Test = () => {
 
                 {/* <UseCallbackComponent /> */}
 
-                {/* <UseMemoComponent /> */}
+                <UseMemoComponent />
 
                 {/* <UseRefComponent/> */}
 

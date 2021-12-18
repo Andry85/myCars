@@ -19,6 +19,7 @@ function UseMemoComponent() {
     const isEven = useMemo(() => {
         let i = 0;
         while( i < 200000000) i++
+        console.log('useMemo run');
         return  counterOne % 2 === 0
     }, [counterOne])
 
